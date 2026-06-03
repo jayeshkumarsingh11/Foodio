@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/navbar/navbar'
 
 const App = () => {
-  const url = "http://localhost:4000"
+  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000"
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
