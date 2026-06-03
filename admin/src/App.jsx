@@ -10,6 +10,7 @@ import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000"
+  console.log("Admin using Backend URL:", url);
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
