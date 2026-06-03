@@ -14,7 +14,17 @@ const port = process.env.PORT || 4000
 
 // Middlewares
 app.use(express.json())
-app.use(cors())
+
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  process.env.ADMIN_URL,
+  'http://localhost:5173',
+  'http://localhost:5174'
+].filter(Boolean);
+
+app.use(cors({
+  origin: allowedOrigins
+}))
 
 // DB Connection
 connectDB();
