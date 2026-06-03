@@ -6,7 +6,7 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from './components/navbar/navbar'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000"
